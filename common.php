@@ -44,6 +44,15 @@ function getRandChar($length){
 }
 
 /**
+ * 生成指定位数的随机数字
+ */
+function generate_code($length = 5) {
+    $min = pow(10 , ($length - 1));
+    $max = pow(10, $length) - 1;
+    return rand($min, $max);
+}
+
+/**
  * pdo连接数据库
  */
 function pdoLinkDatabase($dbms, $host, $dbName, $user, $pass, $sql){
